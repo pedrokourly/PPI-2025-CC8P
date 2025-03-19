@@ -1,0 +1,19 @@
+h1, h3 {
+    text-align: center;
+}
+
+p {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: justify;
+}
+
+ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    padding: 30px;
+}
