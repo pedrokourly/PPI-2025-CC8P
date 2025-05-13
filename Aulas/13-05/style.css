@@ -14,7 +14,7 @@ body {
 main{
     height: 100%;
     width: 70%;
-    background-color: 	#F5F5F5;
+    background-color:#F5F5F5;
     padding: 20px 50px;
 }
 
@@ -66,7 +66,7 @@ header > h1{
 .produto{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 300px;
     height: 350px;
@@ -74,6 +74,8 @@ header > h1{
     padding: 1.5rem;
     border-radius: 4px;
     transition: all 0.3s ease;
+    gap: 7px;
+    font-size: small;
 }
 
 .produto:hover{
@@ -83,8 +85,8 @@ header > h1{
 }
 
 .produto > img{
-    width: 100px;
-    height: 100px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 .produto > h2{
@@ -92,11 +94,18 @@ header > h1{
     margin: 10px 0;
 }
 
+.produto > p{
+    text-align: center;
+}
+
 .produto > button {
     justify-self: end;
     background-color: saddlebrown;
     width: 100%;
     height: 2rem;
+    color: #F5F5F5;
+    border-radius: 6px;
+    border: none;
 }
 
 .produto > button:hover {
