@@ -22,6 +22,89 @@ aside{
     background-color: #5C4033;
     height: 100%;
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aside-total{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: start;
+    color: #F5F5F5;
+}
+
+.aside-total > h3{
+    font-size: 1.1rem;
+    color: #F5F5F5;
+}
+
+.aside-botoes {
+    display: flex;
+    width: 100%;
+}
+
+.aside-botoes > button{
+    padding: 7px;
+    width: 100%;
+    height: 4rem;
+    border: none;
+    background-color: #1f140f;
+    color: #F5F5F5;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.aside-botoes > button:hover{
+    background-color: #91644f;
+    transition: all 0.3s ease;
+}
+
+.aside-botoes > button:hover > span{
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    border: solid 1px blue;
+}
+
+.card-lista{
+    display: flex;
+    height: 8rem;
+    border: solid 1px red;
+    align-items: center;
+}
+
+.card-lista > img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card-lista > .card-lista-infos{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.card-lista > .card-lista-infos > h2{
+    font-size: 1rem;
 }
 
 header{
