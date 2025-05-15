@@ -19,82 +19,63 @@
             <h1>Nosso catálogo</h1>
         </header>
         <div class="produtos">
-            <div class="produto">
+            <div class="produto" data-id="1">
                 <img src="images/elegant-gold-hoop-earrings-for-showcasing-jewelry-design-and-craftsmanship-cut-out-stock-png.webp"
                     alt="Produto 1">
                 <h2>Argola de Ouro</h2>
                 <p>Elegante argola de ouro 18k, perfeita para ocasiões especiais.</p>
-                <p>R$ 150,00</p>
-                <button>Adicionar ao carrinho</button>
+                <p class="preco">R$ 150,00</p>
+                <button class="add-carrinho" data-id="1">Adicionar ao carrinho</button>
             </div>
-            <div class="produto">
+            <div class="produto" data-id="2">
                 <img src="images/Jewellery-Ring-PNG-Photo.png" alt="Produto 2">
                 <h2>Anel de Ouro</h2>
                 <p>Anel de ouro com design clássico e sofisticado.</p>
-                <p>R$ 200,00</p>
-                <button>Adicionar ao carrinho</button>
+                <p class="preco">R$ 200,00</p>
+                <button class="add-carrinho" data-id="2">Adicionar ao carrinho</button>
             </div>
-            <div class="produto">
+            <div class="produto" data-id="3">
                 <img src="images/pngtree-diamond-engagement-ring-clip-art-shiny-jewelry-illustration-in-white-background-png-image_19049150.png"
                     alt="Produto 3">
                 <h2>Anel de Prata</h2>
                 <p>Anel de prata com acabamento brilhante e moderno.</p>
-                <p>R$ 120,00</p>
-                <button>Adicionar ao carrinho</button>
+                <p class="preco">R$ 120,00</p>
+                <button class="add-carrinho" data-id="3">Adicionar ao carrinho</button>
             </div>
-            <div class="produto">
+            <div class="produto" data-id="4">
                 <img src="images/pngtree-gold-3d-three-dimensional-jewelry-ring-modeling-png-image_9048332.png"
                     alt="Produto 4">
                 <h2>Conjunto Anéis de Ouro</h2>
                 <p>Conjunto de anéis de ouro com detalhes únicos e elegantes.</p>
-                <p>R$ 350,00</p>
-                <button>Adicionar ao carrinho</button>
+                <p class="preco">R$ 350,00</p>
+                <button class="add-carrinho" data-id="4">Adicionar ao carrinho</button>
             </div>
-            <div class="produto">
+            <div class="produto" data-id="5">
                 <img src="images/pngtree-stylish-fashion-stone-ring-for-modern-jewelry-png-image_13584519.png"
                     alt="Produto 5">
                 <h2>Anel de Prata com Pedra</h2>
                 <p>Anel de prata com pedra estilosa, ideal para um look moderno.</p>
-                <p>R$ 180,00</p>
-                <button>Adicionar ao carrinho</button>
+                <p class="preco">R$ 180,00</p>
+                <button class="add-carrinho" data-id="5">Adicionar ao carrinho</button>
             </div>
-            <div class="produto">
+            <div class="produto" data-id="6">
                 <img src="images/pngtree-elegant-jewelry-on-transparent-background-png-image_16052924.png"
                     alt="Produto 6">
                 <h2>Anel de Ouro</h2>
                 <p>Anel de ouro com detalhes delicados e acabamento refinado.</p>
-                <p>R$ 250,00</p>
-                <button>Adicionar ao carrinho</button>
+                <p class="preco">R$ 250,00</p>
+                <button class="add-carrinho" data-id="6">Adicionar ao carrinho</button>
             </div>
         </div>
     </main>
     <aside>
         <div class="lista">
-            <div class="card-lista">
-                <img src="images/pngtree-stylish-fashion-stone-ring-for-modern-jewelry-png-image_13584519.png"
-                    alt="produto">
-                <div class="card-lista-infos">
-                    <h2>Anel de Prata com Pedra</h2>
-                    <p>R$ 180,00</p>
-
-                </div>
-                <button>Remover</button>
-            </div>
-            <div class="card-lista">
-                <img src="images/pngtree-stylish-fashion-stone-ring-for-modern-jewelry-png-image_13584519.png"
-                    alt="produto">
-                <div class="card-lista-infos">
-                    <h2>Anel de Prata com Pedra</h2>
-                    <p>R$ 180,00</p>
-
-                </div>
-                <button>Remover</button>
-            </div>
+            <!-- Itens do carrinho serão inseridos aqui via JS -->
         </div>
         <div class="aside-total">
             <h3>Checkout:</h3>
             R$
-            <p>123</p>
+            <p id="checkout-total">0,00</p>
         </div>
         <div class="aside-botoes">
             <button><span class="material-symbols-outlined">
@@ -105,6 +86,8 @@
                 </span></button>
         </div>
     </aside>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

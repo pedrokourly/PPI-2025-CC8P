@@ -81,14 +81,11 @@ aside{
     padding: 10px;
     scrollbar-width: thin;
     scrollbar-color: #ccc transparent;
-    border: solid 1px blue;
 }
 
 .card-lista{
     display: flex;
-    height: 8rem;
-    border: solid 1px red;
-    align-items: center;
+    width: 100%;
 }
 
 .card-lista > img{
@@ -99,12 +96,42 @@ aside{
 
 .card-lista > .card-lista-infos{
     display: flex;
-    flex-direction: column;
     padding: 10px;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.card-lista > .card-lista-infos > h2{
+.card-lista-infos .quantidade-controle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.text-info{
+    padding-right: 8px;
+}
+
+.card-lista-infos .quantidade-controle button {
+    background: #91644f;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
     font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.card-lista-infos .quantidade-controle button:hover {
+    background: #dd9f82;
+}
+
+.card-lista-infos .quantidade-controle .quantidade {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 header{
