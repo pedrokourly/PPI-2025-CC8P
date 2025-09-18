@@ -19,7 +19,7 @@ form.addEventListener("submit", async (e) => {
 
     await fetch(API_URL, {
         method: "POST",
-        headers: { "Content-Type" : "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(novoAluno),
     });
 
@@ -30,7 +30,7 @@ form.addEventListener("submit", async (e) => {
 });
 
 //Função para listar os registros já criados
-async function carregarAlunos(){
+async function carregarAlunos() {
     const res = await fetch(API_URL); //Extender a sintaxe do fetch api
     const alunos = await res.json();
 
@@ -41,7 +41,8 @@ async function carregarAlunos(){
         li.innerHTML = `
         <span>${aluno.nome} (${aluno.idade} anos) <br><span class='curso'>${aluno.curso}</span></span>
         <div class="actions">
-            <button onclick="deletarAluno('${aluno._id}')">Excluir</button>
+            <button class="editar" onclick="atualizarAluno('${aluno._id}')">Editar</button>
+            <button class="excluir" onclick="deletarAluno('${aluno._id}')">Excluir</button>
         </div>
         `;
         alunosList.appendChild(li);
@@ -50,16 +51,29 @@ async function carregarAlunos(){
 
 
 //Função para apagar um registro
-async function deletarAluno(id){
+async function deletarAluno(id) {
     // console.log(id);
-    await fetch(`${API_URL}/${id}`,
-        {
-            method: "DELETE"
-        }
-    );
-    carregarAlunos();
+    let text = "Deseja realmente apagar o registro?";
+
+    if (confirm(text) == true) {
+        await fetch(`${API_URL}/${id}`,
+            {
+                method: "DELETE"
+            }
+        );
+        carregarAlunos();
+    } else {
+
+    }
 }
 //Função para atualizar um registro
+async function atualizarAluno(id) {
+    const res = await fetch(`${API_URL}/${id}`); //Extender a sintaxe do fetch api
+    const aluno = await res.json();
+    nomeInput.value = `${aluno.nome}`;
+    idadeInput.value = `${aluno.idade}`;
+    cursoInput.value = `${aluno.curso}`;
+}
 
 //Chamar a função para listar os alunos
 carregarAlunos();
